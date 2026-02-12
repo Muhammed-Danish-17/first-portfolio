@@ -1,3 +1,18 @@
+// JavaScript
+const buttons = document.querySelectorAll(".read-more-btn");
+
+buttons.forEach(button => {
+    button.addEventListener("click", function () {
+        const box = this.parentElement;
+        box.classList.toggle("active");
+
+        if (box.classList.contains("active")) {
+            this.textContent = "Show Less";
+        } else {
+            this.textContent = "Read More";
+        }
+    });
+});
 const circles = document.querySelectorAll(".circle");
 
 function animateCircles() {
