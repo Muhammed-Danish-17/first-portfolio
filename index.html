@@ -13,7 +13,7 @@
 <body>
 
 <header>
-    <div class="logo">Portfolio</div>
+    <div class="logo">DANISH</div>
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -236,7 +236,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<!-- <section class="contact" id="contact">
     <h2>Contact Me</h2>
 
     <form>
@@ -245,7 +245,24 @@
         <textarea placeholder="Your Message"></textarea>
         <button class="btn">Send Message</button>
     </form>
+</section> -->
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        Message Sent Successfully ✅
+    </div>
 </section>
+
 
 <footer>
     © 2026 My Portfolio | All Rights Reserved

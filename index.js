@@ -20,6 +20,30 @@ function animateCircles() {
         }, 20);
     });
 }
+// CONTACT FORM NOTIFICATION
+const form = document.getElementById("contactForm");
+const notification = document.getElementById("notification");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    notification.classList.add("show");
+
+    setTimeout(() => {
+        notification.classList.remove("show");
+    }, 3000);
+
+    form.reset();
+});
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
