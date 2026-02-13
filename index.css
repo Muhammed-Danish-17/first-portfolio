@@ -16,6 +16,19 @@ body{
                 #0f172a;
     color:#fff;
 }
+/* GLOBAL FADE UP ANIMATION */
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* ============================= */
 /* HEADER */
@@ -513,4 +526,63 @@ footer{
         top:45px;
         font-size:14px;
     }
+}
+/* .typing {
+    border-right: 3px solid #0ef;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    display: inline-block;
+    animation: typing 5s steps(20) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 170px }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+} */
+/* HOME ANIMATION */
+.home-content h3,
+.home-content h1,
+.home-content p,
+.home-content .btn,
+.social-links {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.home-content h1 {
+    animation-delay: 0.3s;
+}
+.home-content h3 {
+    animation-delay: 0.6s;
+}
+.home-content p {
+    animation-delay: 0.9s;
+}
+.home-content .btn {
+    animation-delay: 1.2s;
+}
+.social-links {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.home-img img {
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
 }
